@@ -73,3 +73,15 @@ vim.o.confirm = true
 
 -- Enable truecolors support to use with tmux
 vim.o.termguicolors = true
+
+-- Enable smartindent
+--
+vim.o.expandtab = true
+
+vim.o.tabstop = 2
+
+vim.o.smartindent = true
+
+vim.o.shiftwidth = 2
+
+vim.o.softtabstop = 2
