@@ -27,8 +27,6 @@ require('lazy').setup({
 
   require 'kickstart.plugins.blink',
 
-  require 'kickstart.plugins.tokyonight',
-
   require 'kickstart.plugins.todo-comments',
 
   require 'kickstart.plugins.mini',
@@ -43,7 +41,9 @@ require('lazy').setup({
 
   require 'kickstart.plugins.debug',
 
-  require 'kickstart.plugins.tairiki',
+  require 'kickstart.plugins.kanagawa',
+
+  require 'kickstart.plugins.dadbod',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
