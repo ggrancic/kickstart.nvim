@@ -42,8 +42,6 @@ require('lazy').setup({
   require 'kickstart.plugins.debug',
 
   require 'kickstart.plugins.kanagawa',
-
-  require 'kickstart.plugins.dadbod',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
