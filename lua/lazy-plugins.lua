@@ -43,6 +43,8 @@ require('lazy').setup({
 
   require 'kickstart.plugins.kanagawa',
 
+  require 'kickstart.plugins.tokyonight',
+
   require 'kickstart.plugins.twilight',
 
   require 'kickstart.plugins.noice',
