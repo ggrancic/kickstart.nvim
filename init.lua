@@ -1,27 +1,33 @@
--- [[ Global options ]]
--- Set <space> as the leader key
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+if vim.g.vscode then
+  -- VSCode extension
+else
+  -- ordinary Neovim
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = true
+  -- [[ Global options ]]
+  -- Set <space> as the leader key
+  vim.g.mapleader = ' '
+  vim.g.maplocalleader = ' '
 
--- [[ Options ]]
-require 'options'
+  -- Set to true if you have a Nerd Font installed and selected in the terminal
+  vim.g.have_nerd_font = true
 
--- [[ Keymaps ]]
-require 'keymaps'
+  -- [[ Options ]]
+  require 'options'
 
--- [[ Autocommands ]]
-require 'autocmd'
+  -- [[ Keymaps ]]
+  require 'keymaps'
 
--- [[ Install `lazy.nvim` plugin manager ]]
-require 'lazy-bootstrap'
+  -- [[ Autocommands ]]
+  require 'autocmd'
 
--- [[ Configure and install plugins ]]
-require 'lazy-plugins'
+  -- [[ Install `lazy.nvim` plugin manager ]]
+  require 'lazy-bootstrap'
 
-vim.cmd.colorscheme 'kanagawa-wave'
+  -- [[ Configure and install plugins ]]
+  require 'lazy-plugins'
+
+  vim.cmd.colorscheme 'kanagawa-wave'
+end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
