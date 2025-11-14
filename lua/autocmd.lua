@@ -12,4 +12,24 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Custom autocmds for Oil
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'oil',
+  callback = function()
+    -- Set local options for oil buffers
+    vim.opt_local.colorcolumn = ''
+    vim.opt_local.signcolumn = 'no'
+
+    -- Auto-save when leaving oil buffer with changes
+    vim.api.nvim_create_autocmd('BufLeave', {
+      buffer = 0,
+      callback = function()
+        if vim.bo.modified then
+          vim.cmd 'silent! write'
+        end
+      end,
+    })
+  end,
+})
+
 -- vim: ts=2 sts=2 sw=2 et
